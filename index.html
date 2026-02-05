@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>NetNerd Nexus | Knowledge Base</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
-<body>
-    Hello to the landing page.
-    Push test.
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <custom-header></custom-header>
+    
+    <main class="flex-grow flex flex-col md:flex-row">
+        <custom-sidebar></custom-sidebar>
+        
+        <section class="flex-grow p-6 md:w-2/4">
+            <article class="prose max-w-none bg-white p-6 rounded-lg shadow">
+                <h1 class="text-3xl font-bold mb-4">Welcome to NetNerd Nexus</h1>
+                <p class="mb-4">Your comprehensive knowledge base for computer networking, programming, and personal insights.</p>
+                
+                <div id="content-placeholder">
+                    <p>Select a topic from the sidebar to view content here.</p>
+                </div>
+            </article>
+        </section>
+        
+        <custom-highlights></custom-highlights>
+    </main>
+    
+    <custom-footer></custom-footer>
+
+    <script src="components/header.js"></script>
+    <script src="components/sidebar.js"></script>
+    <script src="components/highlights.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
 </body>
 </html>
